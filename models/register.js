@@ -2,13 +2,20 @@ const mongoose=require('mongoose');
 const registerSchema=mongoose.Schema({
     FullName:{
         type:String,
-        required: true,
-        minLength:8
+        
+        
     },
-    phoneNumber:{
+	pass:{
+        type:String,
+        
+        
+    },
+    phone:{
         type:Number,
-        required: true,
-        minLength:10
+        
+        
+        
+        
     }
-});
+},{strict:true});
 const register=module.exports=mongoose.model('register',registerSchema);
