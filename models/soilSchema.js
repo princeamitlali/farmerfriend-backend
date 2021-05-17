@@ -3,32 +3,63 @@ const mongoose = require('mongoose');
 
 const soilSchema = mongoose.Schema({
 
-
-    Email1: {
-        type: Number,
-        required: true,
-        unique: true,
+    STATE: {
+        type: String,
+        
+      },
+      dist: {
+        type: String,
+        
+      },
+      TelePhone: {
+        type: String,
+       
       },
 
-    Fax1: {
+    Email: {
         type: String,
-        required: true
+        
+        
+      },
+
+    Fax: {
+        type: String,
+        
+
     },
 
     No_of_Staff: {
         type: String,
-        required: true
+        
+
     },
 
     Office_Address_Line1: {
         type: String,
-        required: true
+        
+
+        
+        
     },
 
     Office_Name: {
-        type: Number,
-        required: true
-    }
+        type: String,
+      
+
+        
+    },
+    SOil_Equipment: {
+        type: String,
+      },
+      Soil_Test_No: {
+        type: String,
+      },
+      Other_Information:{
+            type: String,
+          
+      }
+
+    
 
 })
 

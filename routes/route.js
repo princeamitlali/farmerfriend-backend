@@ -3,6 +3,7 @@ const router=express.Router();
 const {HelplineSchema}= require('../models/Helplines')
 const {schemeSchema} = require('../models/Schemes')
 const {SoilSchema}=require('../models/soilSchema')
+const {contactus}= require('../models/contactUs')
 const {mandischema} = require("../models/mandi")
 const {CropSchema} = require("../models/cropSchema")
 const register=require('../models/register')
@@ -69,6 +70,21 @@ router.get('/HelplineSchema',(req,res,next)=>{
 });
 
 
+// router.post('/HelplineSchema',(req,res,next)=>{
+//     let newregister=new HelplineSchema({
+//         details:req.body.details,
+//         title: req.body.titles
+//     });
+//     newregister.save((err,HelplineSchema)=>{
+//         if(err)
+//         {
+//             res.json({msg: 'Failed to register'});
+//         }
+//         else{
+//             res.json({msg: 'user added successfully'});
+//         }
+//     })
+// });
 
 router.post('/HelplineSchema',(req,res,next)=>{
     let newregister=new HelplineSchema({
@@ -86,11 +102,25 @@ router.post('/HelplineSchema',(req,res,next)=>{
     })
 });
 
+// router.post('/HelplineSchema',(req,res,next)=>{
+//     let newHelpline=new HelplineSchema({
 
+//         details: req.body.details ,
+//         title: req.body.title 
+//     });
+//     HelplineSchema.save((err,HelplineSchema)=>{
+//         if(err)
+//         {
+//             res.json({msg: 'Failed to login'});
+//         }
+//         else{
+//             res.json({msg: 'admin logged in successfully'});
+//         }
+//     })
+// });
 
 
 //SchemesSchema Route
-
 router.get('/schemeSchema',(req,res,next)=>{
     schemeSchema.find(function(err,schemeSchema){
         res.json(schemeSchema);
@@ -177,10 +207,10 @@ router.post('/cropSchema',(req,res,next)=>{
     SoilSchema.save((err,SoilSchema)=>{
         if(err)
         {
-            res.json({msg: 'Failed to login'});
+            res.json({msg: 'Failed to register'});
         }
         else{
-            res.json({msg: 'admin logged in successfully'});
+            res.json({msg: 'user added successfully'});
         }
     })
 });
