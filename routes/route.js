@@ -9,7 +9,7 @@ const {CropSchema} = require("../models/cropSchema")
 const register=require('../models/register')
 const login = require('../models/login')
 const Admin = require('../models/admin')
-const {contactus}= require('../models/contactUs')
+
 const {enquiry} = require('../models/enquiry')
 const {axios} = require('axios')
 
